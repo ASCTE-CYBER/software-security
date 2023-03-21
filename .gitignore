@@ -50,3 +50,15 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Vagrant files
+.vagrant
+
+# VS Code files
+.vscode
+
+# Temp folder
+/temp
+
+# Virtual Envs
+/env
