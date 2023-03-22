@@ -62,3 +62,7 @@ dkms.conf
 
 # Virtual Envs
 /env
+
+# Lab-specific
+/bin/connect
+/packages
