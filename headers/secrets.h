@@ -2,7 +2,7 @@
 #define _myfile_h
 
 int is_valid_password() {
-    return 1;
+    return 0;
 }
 
 #endif

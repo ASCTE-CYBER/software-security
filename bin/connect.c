@@ -8,14 +8,20 @@ void launch_shell() {
 }
 
 int check_password() {
-    char password[64];
+    char password[16];
     gets(password);
     return is_valid_password(password);
 }
 
-int main(int argc, char **argv) {
-    printf("\nWELCOME TO THE SECURE SERVER\n\npassword: ");
+int interact() {
+    printf("password: ");
     if (check_password()) {
         launch_shell();
     }
+    interact();
+}
+
+int main(int argc, char **argv) {
+    printf("\nWELCOME TO THE SECURE SERVER\n\n");
+    interact();
 }
