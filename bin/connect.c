@@ -1,27 +1,37 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
 #include <lab/secrets.h>
 
 void launch_shell() {
     printf("\nLOGIN SUCCESSFUL!!!\n\n");
-    system("/bin/sh");
+    /*system("echoexport PS1='SECURE-SERVER# ' >> /etc/profile");*/
+    /*system("/bin/sh");*/
 }
 
-int check_password() {
-    char password[16];
-    gets(password);
-    return is_valid_password(password);
-}
+int main(void)
+{
+    char buff[15];
+    int pass = 0;
 
-int interact() {
-    printf("password: ");
-    if (check_password()) {
+    printf("\npassword: ");
+    gets(buff);
+
+    if(strcmp(buff, "thegeekstuff"))
+    {
+        printf ("\n Wrong Password \n");
+    }
+    else
+    {
+        printf ("\n Correct Password \n");
+        pass = 1;
+    }
+
+    if(pass)
+    {
+       /* Now Give root or admin rights to user*/
+        /*printf ("\n Root privileges given to the user \n");*/
         launch_shell();
     }
-    interact();
-}
 
-int main(int argc, char **argv) {
-    printf("\nWELCOME TO THE SECURE SERVER\n\n");
-    interact();
+    return 0;
 }
