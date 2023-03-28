@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
     app.vm.hostname = "sandbox-server"
     app.vm.network "private_network", ip: "192.168.56.112"
     app.vm.synced_folder "./bin", "/lab"
-    app.vm.synced_folder "./headers", "/usr/include/lab"
+    app.vm.synced_folder "./headers", "/usr/include/photos"
     app.vm.provider "virtualbox" do |vb|
       vb.gui = false
       vb.memory = "1024"
