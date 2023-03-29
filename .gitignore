@@ -67,3 +67,5 @@ dkms.conf
 /bin/connect
 /bin/.bash*
 /packages
+/boxes
+
